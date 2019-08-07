@@ -1,2 +1,4 @@
 class SecretsController < ApplicationController
+  
+  
 end
