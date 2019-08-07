@@ -1,9 +1,6 @@
 class SessionsController < ApplicationController
    before_action :require_login
    
- def show
-    @document = Document.find(params[:id])
-  end
   def new 
     
   end 
