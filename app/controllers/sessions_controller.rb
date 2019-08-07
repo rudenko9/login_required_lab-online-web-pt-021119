@@ -1,17 +1,17 @@
 class SessionsController < ApplicationController
-   before_action :require_login
+
    
   def new 
     render :login
   end  
   
    def create
-        
+        return redirect_to '/login' if params[:name].nil? or params[:name].empty?
+    session[:name] = params[:name]
+    redirect_to '/welcome'
+  end 
     
-    private
- 
-  def require_login
-    return head(:forbidden) unless session.include? :user_id
-  end
+   
+  
     
 end
