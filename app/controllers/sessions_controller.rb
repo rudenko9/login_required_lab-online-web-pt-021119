@@ -2,8 +2,9 @@ class SessionsController < ApplicationController
    before_action :require_login
    
   def new 
-    
-  end 
+    render :login
+  end  
+  
    def create
         session[:username] = params[:username]
         redirect_to '/'
